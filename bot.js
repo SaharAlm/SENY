@@ -11,9 +11,9 @@ bot.on("ready", function() {
   //status
  bot.user.setStatus('Game');
  //streaming
- bot.user.setGame("-CM");
+ bot.user.setGame("-Commands");
  //setGame
- bot.user.setGame("-CM", "https://twitch.tv/SaharGx");
+ bot.user.setGame("-Commands", "https://twitch.tv/SaharGx");
 });
 
 bot.on("message", function(message) {
@@ -37,7 +37,7 @@ bot.on("message", function(message) {
          message.reply("תזמינו חברים לשרת יהיה כיף https://discord.gg/JqE9Paq")
          break;
     //CD(commands)
-    case "CM":
+    case "Commands":
         message.channel.send({embed:{
           title: 'Commands!',
           description: '-info \n -סני \n -invitefriends',
