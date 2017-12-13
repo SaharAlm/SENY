@@ -38,7 +38,10 @@ bot.on("message", function(message) {
          break;
     //CD(commands)
     case "CM", "COMMANDS":
-        message.reply("server command \n -סני \n -info \n -invitefriends")
+        message.channel.send({embed:{
+          title: 'Commands!',
+          description: '-info \n -סני \n -invitefriends'
+        }});
         break;
     default:
          message.channel.send('No No No my friend')
