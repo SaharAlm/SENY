@@ -4,19 +4,7 @@ const prefix = Settings.prefix;
 
 var bot = new Discord.Client();
 
-bot.on('guildMemberAdd', member => {
-  if (member.guild.id === '384420942010515466') {
-    member.setNickname(`🤘${member.user.username}`)
-    member.addRole('384420942010515466', 'Joined in the 90\'s')
-  }
-    member.guild.channels.get('353436192353681411').send('**' + member.user.username + '**, Has Joined!')
 
-});
-
-bot.on("guildMemberRemove", member => {
-    member.guild.channels.get('353436192353681411').send('**' + member.user.username + '**, ByeBye')
-
-});
 
 bot.on("ready", function() {
   console.log('Ready in the 90\'s');
