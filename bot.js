@@ -40,7 +40,8 @@ bot.on("message", function(message) {
     case "CM", "COMMANDS":
         message.channel.send({embed:{
           title: 'Commands!',
-          description: '-info \n -סני \n -invitefriends'
+          description: '-info \n -סני \n -invitefriends',
+          color: 0xF900FF
         }});
         break;
     default:
