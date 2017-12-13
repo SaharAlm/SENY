@@ -58,4 +58,4 @@ bot.on("message", function(message) {
   }
 });
 
-bot.login(process.env.Settings.token);
+bot.login(Settings.token);
