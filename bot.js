@@ -58,6 +58,4 @@ bot.on("message", function(message) {
   }
 });
 
-worker: node bot.js
-
 bot.login(process.env.Settings.token);
