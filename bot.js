@@ -37,7 +37,7 @@ bot.on("message", function(message) {
          message.reply("תזמינו חברים לשרת יהיה כיף https://discord.gg/JqE9Paq")
          break;
     //CD(commands)
-    case "CM", "COMMANDS":
+    case "CM":
         message.channel.send({embed:{
           title: 'Commands!',
           description: '-info \n -סני \n -invitefriends',
