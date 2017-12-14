@@ -40,7 +40,11 @@ bot.on("message", function(message) {
          break;
     //invite
     case "invitefriends":
-         message.reply("תזמינו חברים לשרת יהיה כיף https://discord.gg/JqE9Paq")
+         message.reply({embed:{
+           title: "InviteYourFriends",
+           description: "תזמינו חברים לשרת יהיה כיף https://discord.gg/JqE9Paq",
+           color: 0xFF00CA // colooorrrrrrrrrrrrrrrrr
+         }});
          break;
     //CD(commands)
     case "Commands":
