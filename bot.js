@@ -4,6 +4,12 @@ const prefix = Settings.prefix;
 
 var bot = new Discord.Client();
 
+bot.on('guildMemberAdd', member => {
+  if (member.guild.id === '384420942010515466') {
+    member.setNickname(`??${member.user.username}`)
+    member.addRole('384420942010515466', 'Joined in the 90\'s')
+  }
+});
 
 
 bot.on("ready", function() {
