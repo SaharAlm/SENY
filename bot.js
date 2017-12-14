@@ -11,7 +11,6 @@ bot.on('guildMemberAdd', member => {
   }
 });
 
-
 bot.on("ready", function() {
   console.log('Ready in the 90\'s');
   //status
@@ -36,7 +35,20 @@ bot.on("message", function(message) {
         break;
     //info
     case "info":
-         message.reply("זה השרת של סני")
+      const embed = new Discord.RichEmbed()
+      .setTitle("__info__")
+.setAuthor("Seny's server", message.guild.iconURL.toString())
+.setColor(0xFF00CA)
+.setFooter("Info for Seny's server", bot.users.get('238349889497464832').avatarURL)
+.setImage("http://i.imgur.com/yVpymuV.png")
+.setThumbnail("http://i.imgur.com/p2qNFag.png")
+.setTimestamp()
+.setURL("https://discord.js.org/#/docs/main/indev/class/RichEmbed")
+.addField("This is a field title, it can hold 256 characters")
+.addField("Inline Field")
+.addField("Inline Field 3");
+
+message.channel.send({embed});
          break;
     //invite
     case "invitefriends":
