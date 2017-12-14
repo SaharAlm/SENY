@@ -55,9 +55,9 @@ bot.on("message", function(message) {
 .setThumbnail("http://i.imgur.com/p2qNFag.png")
 .setTimestamp()
 .setURL("https://www.xxx.com")
-.addField("This is a field title, it can hold 256 characters")
-.addField("Inline Field")
-.addField("Inline Field 3");
+.addField("infobeta")
+.addField("infobeta")
+.addField("infobeta");
 
 message.channel.send({embed});
          break;
