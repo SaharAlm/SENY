@@ -40,7 +40,7 @@ bot.on("message", function(message) {
          break;
     //invite
     case "invitefriends":
-         message.reply({embed:{
+         message.channel.send({embed:{
            title: "InviteYourFriends",
            description: "תזמינו חברים לשרת יהיה כיף https://discord.gg/JqE9Paq",
            color: 0xFF00CA // colooorrrrrrrrrrrrrrrrr
