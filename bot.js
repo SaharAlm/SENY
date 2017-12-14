@@ -9,7 +9,18 @@ bot.on('guildMemberAdd', member => {
     member.setNickname(`??${member.user.username}`)
     member.addRole('384420942010515466', 'Joined in the 90\'s')
   }
+    member.guild.channels.get('353436192353681411').send('**' + member.user.username + '**, Has Joined!')
+
 });
+
+bot.on("guildMemberRemove", member => {
+    member.guild.channels.get('353436192353681411').send(`**${member.user.username}** BYEBYE My friend!`)
+
+});
+
+bot.on('guildMemberRemove', member => {
+
+})
 
 bot.on("ready", function() {
   console.log('Ready in the 90\'s');
@@ -43,7 +54,7 @@ bot.on("message", function(message) {
 .setImage("http://i.imgur.com/yVpymuV.png")
 .setThumbnail("http://i.imgur.com/p2qNFag.png")
 .setTimestamp()
-.setURL("https://discord.js.org/#/docs/main/indev/class/RichEmbed")
+.setURL("https://www.xxx.com")
 .addField("This is a field title, it can hold 256 characters")
 .addField("Inline Field")
 .addField("Inline Field 3");
