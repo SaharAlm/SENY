@@ -45,16 +45,16 @@ bot.on("message", function(message) {
     //info
     case "info":
       .setTitle("__info__")
-.setAuthor("Seny's server", message.guild.iconURL.toString())
-.setColor(0xFF00CA)
-.setFooter("Info for Seny's server", bot.users.get('238349889497464832').avatarURL)
-.setImage("http://i.imgur.com/yVpymuV.png")
-.setThumbnail("http://i.imgur.com/p2qNFag.png")
-.setTimestamp()
-.setURL("https://www.xxx.com")
-.addField("infobeta")
-.addField("infobeta")
-.addField("infobeta");
+setAuthor("Seny's server", message.guild.iconURL.toString())
+setColor(0xFF00CA)
+setFooter("Info for Seny's server", bot.users.get('238349889497464832').avatarURL)
+setImage("http://i.imgur.com/yVpymuV.png")
+setThumbnail("http://i.imgur.com/p2qNFag.png")
+setTimestamp()
+setURL("https://www.xxx.com")
+addField("infobeta")
+addField("infobeta")
+addField("infobeta");
 
 message.channel.send({embed});
          break;
