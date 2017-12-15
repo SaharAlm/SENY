@@ -45,9 +45,6 @@ bot.on("message", function(message) {
     const embed = new Discord.RichEmbed()
       .setTitle("Seny's Server!")
       .setAuthor("Seny's Server.", bot.users.get('238349889497464832').avatarURL)
-      /*
-       * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
-       */
       .setColor(0x00AE86)
       .setDescription("This is the main body of text, it can hold 2048 characters.")
       .setFooter("The Bot Created by @Twins", message.guild.iconURL)
