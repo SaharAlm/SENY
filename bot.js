@@ -15,15 +15,13 @@ bot.on('guildMemberAdd', member => {
 
 bot.on("guildMemberRemove", member => {
     member.guild.channels.get('353436192353681411').send(`**${member.user.username}** BYEBYE My friend!`)
-
 });
 
-bot.on('guildMemberRemove', member => {
-
-})
 
 bot.on("ready", function() {
   console.log('Ready in the 90\'s');
+
+
   //status
  bot.user.setStatus('Game');
  //streaming
@@ -70,7 +68,7 @@ message.channel.send({embed});
          }});
          break;
     //CD(commands)
-    case "Commands":
+    case "Commands!":
         message.channel.send({embed:{
           title: 'Commands!',
           description: '-info \n -סני \n -invitefriends',
