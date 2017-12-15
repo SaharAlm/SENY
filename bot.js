@@ -12,6 +12,7 @@ bot.on('guildMemberAdd', member => {
     member.guild.channels.get('353436192353681411').send('**' + member.user.username + '**, Has Joined!')
 
 });
+
 bot.on("guildMemberRemove", member => {
     member.guild.channels.get('353436192353681411').send(`**${member.user.username}** BYEBYE My friend!`)
 });
@@ -19,8 +20,6 @@ bot.on("guildMemberRemove", member => {
 
 bot.on("ready", function() {
   console.log('Ready in the 90\'s');
-
-
   //status
  bot.user.setStatus('Game');
  //streaming
@@ -43,20 +42,33 @@ bot.on("message", function(message) {
         break;
     //info
     case "info":
-      const embed = new Discord.RichEmbed();
-      .setTitle("__info__")
-.setAuthor("Seny's server", message.guild.iconURL.toString())
-.setColor(0xFF00CA)
-.setFooter("Info for Seny's server", bot.users.get('238349889497464832').avatarURL)
-.setImage("http://i.imgur.com/yVpymuV.png")
-.setThumbnail("http://i.imgur.com/p2qNFag.png")
-.setTimestamp()
-.setURL("https://www.xxx.com")
-.addField("infobeta")
-.addField("infobeta")
-.addField("infobeta");
+    const embed = new Discord.RichEmbed()
+      .setTitle("Seny's Server!")
+      .setAuthor("Seny's Server.", bot.users.get('238349889497464832').avatarURL)
+      /*
+       * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
+       */
+      .setColor(0x00AE86)
+      .setDescription("This is the main body of text, it can hold 2048 characters.")
+      .setFooter("The Bot Created by @Twins", message.guild.iconURL.toString())
+      .setImage("http://i.imgur.com/yVpymuV.png")
+      .setThumbnail("http://i.imgur.com/p2qNFag.png")
+      /*
+       * Takes a Date object, defaults to current date.
+       */
+      .setTimestamp()
+      .setURL("https://www.xxx.com")
+      /*
+       * Inline fields may not display as inline if the thumbnail and/or image is too big.
+       */
+      .addField("Inline Field", "They can also be inline.", true)
+      /*
+       * Blank field, useful to create some space.
+       */
+      .addBlankField(true)
+      .addField("Inline Field 3", "You can have a maximum of 25 fields.", true);
 
-message.channel.send({embed});
+      message.channel.send({embed});
          break;
     //invite
     case "invitefriends":
