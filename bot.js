@@ -28,6 +28,7 @@ bot.on("ready", function() {
  bot.user.setGame("-Commands", "https://twitch.tv/SaharGx");
 });
 
+
 bot.on("message", function(message) {
   if (message.author.equals(bot.user));
 
@@ -48,20 +49,12 @@ bot.on("message", function(message) {
       .setColor(0x00AE86)
       .setDescription("This is the main body of text, it can hold 2048 characters.")
       .setFooter("The Bot Created by @Twins", message.guild.iconURL)
-      .setImage("http://i.imgur.com/yVpymuV.png")
-      .setThumbnail("http://i.imgur.com/p2qNFag.png")
       /*
        * Takes a Date object, defaults to current date.
        */
-      .setTimestamp()
+      .setTimestamp(message.guild.createdAt)
       .setURL("https://www.xxx.com")
-      /*
-       * Inline fields may not display as inline if the thumbnail and/or image is too big.
-       */
       .addField("Inline Field", "They can also be inline.", true)
-      /*
-       * Blank field, useful to create some space.
-       */
       .addBlankField(true)
       .addField("Inline Field 3", "You can have a maximum of 25 fields.", true);
 
@@ -83,6 +76,7 @@ bot.on("message", function(message) {
           color: 0xF900FF // this is the color
         }});
         break;
+
     default:
          message.channel.send('No No No my friend')
         break;
