@@ -1,6 +1,7 @@
 const Discord = require("discord.js");
 const Settings = require("./setting.json");
 const prefix = Settings.prefix;
+const embed = new Discord.RichEmbed();
 
 var bot = new Discord.Client();
 
@@ -12,7 +13,6 @@ bot.on('guildMemberAdd', member => {
     member.guild.channels.get('353436192353681411').send('**' + member.user.username + '**, Has Joined!')
 
 });
-
 bot.on("guildMemberRemove", member => {
     member.guild.channels.get('353436192353681411').send(`**${member.user.username}** BYEBYE My friend!`)
 });
@@ -44,7 +44,6 @@ bot.on("message", function(message) {
         break;
     //info
     case "info":
-      const embed = new Discord.RichEmbed()
       .setTitle("__info__")
 .setAuthor("Seny's server", message.guild.iconURL.toString())
 .setColor(0xFF00CA)
@@ -68,9 +67,9 @@ message.channel.send({embed});
          }});
          break;
     //CD(commands)
-    case "Commands!":
+    case "CM":
         message.channel.send({embed:{
-          title: 'Commands!',
+          title: 'CM',
           description: '-info \n -סני \n -invitefriends',
           color: 0xF900FF // this is the color
         }});
