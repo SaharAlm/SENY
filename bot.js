@@ -1,7 +1,6 @@
 const Discord = require("discord.js");
 const Settings = require("./setting.json");
 const prefix = Settings.prefix;
-const embed = new Discord.RichEmbed();
 
 var bot = new Discord.Client();
 
@@ -44,17 +43,18 @@ bot.on("message", function(message) {
         break;
     //info
     case "info":
-      setTitle("__info__")
-setAuthor("Seny's server", message.guild.iconURL.toString())
-setColor(0xFF00CA)
-setFooter("Info for Seny's server", bot.users.get('238349889497464832').avatarURL)
-setImage("http://i.imgur.com/yVpymuV.png")
-setThumbnail("http://i.imgur.com/p2qNFag.png")
-setTimestamp()
-setURL("https://www.xxx.com")
-addField("infobeta")
-addField("infobeta")
-addField("infobeta");
+     const embed = new Discord.RichEmbed();
+      .setTitle("__info__")
+.setAuthor("Seny's server", message.guild.iconURL.toString())
+.setColor(0xFF00CA)
+.setFooter("Info for Seny's server", bot.users.get('238349889497464832').avatarURL)
+.setImage("http://i.imgur.com/yVpymuV.png")
+.setThumbnail("http://i.imgur.com/p2qNFag.png")
+.setTimestamp()
+.setURL("https://www.xxx.com")
+.addField("infobeta")
+.addField("infobeta")
+.addField("infobeta");
 
 message.channel.send({embed});
          break;
