@@ -50,7 +50,7 @@ bot.on("message", function(message) {
        */
       .setColor(0x00AE86)
       .setDescription("This is the main body of text, it can hold 2048 characters.")
-      .setFooter("The Bot Created by @Twins", (message.guild.iconURL).toString())
+      .setFooter("The Bot Created by @Twins", message.guild.iconURL)
       .setImage("http://i.imgur.com/yVpymuV.png")
       .setThumbnail("http://i.imgur.com/p2qNFag.png")
       /*
