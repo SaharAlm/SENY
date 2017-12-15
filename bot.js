@@ -43,7 +43,7 @@ bot.on("message", function(message) {
         break;
     //info
     case "info":
-     const embed = new Discord.RichEmbed();
+      const embed = new Discord.RichEmbed();
       .setTitle("__info__")
 .setAuthor("Seny's server", message.guild.iconURL.toString())
 .setColor(0xFF00CA)
