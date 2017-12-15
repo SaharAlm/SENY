@@ -42,21 +42,21 @@ bot.on("message", function(message) {
         message.reply("ילד רע")
         break;
     //info
-    case "info":
+    case "SRinfo":
     const embed = new Discord.RichEmbed()
-      .setTitle("Seny's Server!")
-      .setAuthor("Seny's Server.", bot.users.get('238349889497464832').avatarURL)
-      .setColor(0x00AE86)
-      .setDescription("This is the main body of text, it can hold 2048 characters.")
+      .setTitle("ServerInfo!")
+      .setAuthor("ServerInfo!", bot.users.get('238349889497464832').avatarURL)
+      .setColor(0xFF00CA)
+      .setDescription("This is Server info!.")
       .setFooter("The Bot Created by @Twins", message.guild.iconURL)
       /*
        * Takes a Date object, defaults to current date.
        */
       .setTimestamp(message.guild.createdAt)
       .setURL("https://www.xxx.com")
-      .addField("Inline Field", "They can also be inline.", true)
+      .addField("This server!", "They can also be inline.", true)
       .addBlankField(true)
-      .addField("Inline Field 3", "You can have a maximum of 25 fields.", true);
+      .addField("Bot Created By!", "<@238349889497464832>", true);
 
       message.channel.send({embed});
          break;
