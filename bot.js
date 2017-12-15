@@ -44,7 +44,7 @@ bot.on("message", function(message) {
         break;
     //info
     case "info":
-      .setTitle("__info__")
+      setTitle("__info__")
 setAuthor("Seny's server", message.guild.iconURL.toString())
 setColor(0xFF00CA)
 setFooter("Info for Seny's server", bot.users.get('238349889497464832').avatarURL)
