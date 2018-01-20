@@ -83,10 +83,10 @@ bot.on("message", function(message) {
   }
 
     let man = message.guild.users.get(message.author.id.toString())
-    
-  if (message.contet === "yay")(
-    send.man
-  )
+
+  if (message.contet === "yay") {
+    man.send('RIP lil peep')
+  }
 });
 
 bot.login(Settings.token);
