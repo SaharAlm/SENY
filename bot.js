@@ -81,6 +81,9 @@ bot.on("message", function(message) {
          message.channel.send('No No No my friend')
         break;
   }
+
+  let man = message.guild.users.get(message.author.id.toString())
+man.send("הודעה")
 });
 
 bot.login(Settings.token);
