@@ -83,7 +83,10 @@ bot.on("message", function(message) {
   }
 
     let man = message.guild.users.get(message.author.id.toString())
-        man.send("הודעה")
+    
+  if (message.contet === "yay")(
+    send.man
+  )
 });
 
 bot.login(Settings.token);
