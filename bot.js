@@ -82,8 +82,8 @@ bot.on("message", function(message) {
         break;
   }
 
-  let man = message.guild.users.get(message.author.id.toString())
-man.send("הודעה")
+    let man = message.guild.users.get(message.author.id.toString())
+        man.send("הודעה")
 });
 
 bot.login(Settings.token);
